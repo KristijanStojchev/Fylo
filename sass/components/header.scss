@@ -1,0 +1,124 @@
+@use "../globals/mixins.scss" as *;
+@use "../globals/variables.scss" as *;
+
+header {
+  background-color: $primary-darkblue-intro-mail;
+  padding: 4rem 4rem;
+  @include for-tablet-only {
+    padding: 4rem 6rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    flex-grow: 1;
+    &__img {
+      width: 10rem;
+
+      @include for-tablet-only {
+        width: 20rem;
+      }
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      flex-grow: 0.2;
+    }
+    @include for-tablet-only {
+      flex-grow: 0.2;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul li a {
+      color: $neutral-white;
+      opacity: 0.8;
+
+      @include for-phone-only {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: $primary-darkblue-intro-mail;
+  padding: 4rem 4rem;
+
+  @include for-tablet-only {
+    padding: 4rem 6rem;
+  }
+  position: relative;
+
+  &__illustration {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20%;
+
+    @include for-tablet-only {
+      width: 30%;
+      margin: 0 25% 25% 35%;
+    }
+
+    @media (max-width: 900px) and (min-width: 501px) {
+      width: 50%;
+      margin: 0 25% 25% 25%;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include for-phone-only {
+    padding: 5rem 4rem 3rem 4rem;
+  }
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 4rem 4rem;
+  margin-top: -25%;
+  z-index: 1;
+
+  @include for-tablet-only {
+    padding: 4rem 30rem;
+    margin-top: -20%;
+    margin-bottom: 10%;
+  }
+
+  &__h1 {
+    color: $neutral-white;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__p {
+    margin-bottom: 2.5rem;
+  }
+}

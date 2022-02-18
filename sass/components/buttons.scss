@@ -1,0 +1,52 @@
+@use "../globals/mixins.scss" as *;
+@use "../globals/variables.scss" as *;
+
+.hero-section,
+.early_access__wrapper {
+  &__btn {
+    background: linear-gradient(
+      90deg,
+      $accent-cyan-gradient,
+      $accent-blue-gradient
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 4.5rem;
+    border-radius: 5rem;
+    color: $neutral-white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    width: 25rem;
+
+    @include for-smaller-phones {
+      width: 18rem !important;
+    }
+  }
+
+  &__input {
+    width: 25rem;
+    @include for-tablet-only {
+      width: 60%;
+    }
+    margin-right: 5rem;
+    @include for-smaller-phones {
+      width: 18rem !important;
+    }
+  }
+}
+
+.section_about__text__btn {
+  display: inline-flex;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  color: $accent-cyan-gradient;
+  border-bottom: 1px solid $accent-cyan-gradient;
+
+  img {
+    margin-left: 0.8rem;
+  }
+}

@@ -1,0 +1,148 @@
+@use "../globals/mixins.scss" as *;
+@use "../globals/variables.scss" as *;
+
+footer {
+  background-color: $primary-darkblue-footer-bg;
+  position: relative;
+  padding-top: 30rem;
+}
+
+.early_access {
+  padding: 2rem;
+  position: absolute;
+  top: -20rem;
+  height: 50rem;
+
+  @include for-tablet-only {
+    position: relative;
+    margin: -25rem auto 0 auto;
+    width: 70%;
+  }
+
+  &__wrapper {
+    background-color: $primary-darkblue-intro-mail;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.8rem;
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+    &__copy {
+      @include for-tablet-only {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+    }
+
+    h1,
+    p,
+    input {
+      margin-bottom: 2.5rem;
+    }
+
+    input {
+      padding: 0 2rem;
+      height: 4.5rem;
+      border-radius: 5rem;
+
+      &::placeholder {
+        font-size: 1rem;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.footer-wrapper {
+  height: 100%;
+  padding: 0 4rem;
+
+  @include for-tablet-only {
+    margin-top: -25rem;
+  }
+
+  &__wrapper {
+    @include for-tablet-only {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 5rem;
+  }
+
+  &__contact {
+    @include for-tablet-only {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+
+      &__location {
+        @include for-tablet-only {
+          width: 50%;
+        }
+      }
+    }
+
+    p {
+      text-align: left;
+      margin-left: 2rem;
+    }
+
+    &__location,
+    &__copy__phone,
+    &__copy__mail {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    &__mail {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__links {
+    @include for-tablet-only {
+      display: flex;
+      justify-content: space-around;
+      width: 20%;
+    }
+    ul {
+      margin-bottom: 5rem;
+
+      li {
+        margin-bottom: 1.5rem;
+        a {
+          color: $neutral-white;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding-bottom: 4rem;
+
+  ul {
+    display: flex;
+    li {
+      margin: 0 1rem;
+
+      i {
+        font-size: 1.5rem;
+        color: $neutral-white;
+        background-color: $primary-darkblue-footer-bg;
+        border: 1px solid $neutral-white;
+        border-radius: 50%;
+        padding: 0.8rem;
+      }
+    }
+  }
+}
